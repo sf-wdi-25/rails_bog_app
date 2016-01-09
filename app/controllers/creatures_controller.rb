@@ -8,3 +8,4 @@ def index
   #render the index view (it has access to instance variable)
   render :index
 end
+end

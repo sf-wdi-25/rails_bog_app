@@ -91,4 +91,7 @@ class CreaturesController < ApplicationController
 		#redirect to creatures_path is equivalent to:
 		#redirect_to "/creatures"
 	end
+
+	def validates
+	end
 end

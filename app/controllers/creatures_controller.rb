@@ -7,4 +7,8 @@ class CreaturesController < ApplicationController
 		# Renders the index view (gives it access to the instance variable)
 		render :index
 	end
+
+	def new
+		render :new
+	end
 end

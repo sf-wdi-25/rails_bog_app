@@ -871,3 +871,29 @@ NameError (undefined local variable or method `creature' for #<CreaturesControll
   Rendered /Users/DougTsui/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/DougTsui/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/DougTsui/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (127.3ms)
+
+
+Started GET "/creatures/1/edit" for ::1 at 2016-01-10 15:07:26 -0800
+Processing by CreaturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCreature Load (1.6ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered creatures/edit.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 144ms (Views: 102.1ms | ActiveRecord: 3.6ms)
+
+
+Started PATCH "/creatures/1" for ::1 at 2016-01-10 15:07:35 -0800
+Processing by CreaturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VCfqi75AHWy7ziWAxKPGEbtiYG8TLU6Sj1yU+QKsi+9nMgtVhxzNAWA4Xb1E4+gcbHvA3Ed+/sHDfvaaJFFzzw==", "creature"=>{"name"=>"Yoda", "description"=>"Got to test this out now"}, "commit"=>"Save Creature", "id"=>"1"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "creatures" SET "description" = ?, "updated_at" = ? WHERE "creatures"."id" = ?  [["description", "Got to test this out now"], ["updated_at", "2016-01-10 23:07:35.787192"], ["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/creatures.1
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/creatures.1" for ::1 at 2016-01-10 15:07:35 -0800
+Processing by CreaturesController#index as 
+  [1m[35mCreature Load (0.3ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.3ms)

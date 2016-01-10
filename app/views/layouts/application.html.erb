@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BogApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+  <ol class="breadcrumb">
+		<li><a href="/creatures">Home</a></li>
+  	<li><a href="/creatures/new">Add New Creature</a></li>
+ 	</ol>
+  </div>
+</nav>
+
+<body> 
+
+<%= yield %>
+
+
+</body>
+</html>

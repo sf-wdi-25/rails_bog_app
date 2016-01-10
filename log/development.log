@@ -4,3 +4,55 @@ Started GET "/" for ::1 at 2016-01-09 16:26:18 -0800
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/DougTsui/.rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (10.9ms)
 Completed 200 OK in 51ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  select sqlite_version(*)
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCreatures (20160110025129)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "creatures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160110025129"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Yoda"], ["description", "Little green man"], ["created_at", "2016-01-10 02:53:16.560661"], ["updated_at", "2016-01-10 02:53:16.560661"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luke"], ["description", "Jedi"], ["created_at", "2016-01-10 02:54:28.753852"], ["updated_at", "2016-01-10 02:54:28.753852"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Darth Vader"], ["description", "Father of Luke"], ["created_at", "2016-01-10 02:54:28.768648"], ["updated_at", "2016-01-10 02:54:28.768648"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2016-01-09 18:57:56 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.3ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 1730ms (Views: 1725.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap-3.3.6.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-01-09 18:57:58 -0800
+
+
+Started GET "/assets/creatures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-09 18:57:58 -0800
+
+
+Started GET "/assets/application.self-0b10b613e78bf6baf2a5c2273e3c9aa40d45e8e044230ee320e841f4719a7aeb.css?body=1" for ::1 at 2016-01-09 18:57:58 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-09 18:57:58 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-09 18:57:58 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-09 18:57:58 -0800
+
+
+Started GET "/assets/creatures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-09 18:57:58 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-09 18:57:58 -0800

@@ -14,9 +14,11 @@ class CreaturesController < ApplicationController
   end
 
   def create
-    creature = Creature.new(@creature_params)
-    if creature.save
-      redirect_to creatures_path(creature)
+    @creature = Creature.new(@creature_params)
+    if @creature.save
+      redirect_to creature_path(@creature)
+    else
+      redirect_to(new_creature_path, :notice => "Please input all")
     end
   end
 

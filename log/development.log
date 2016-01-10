@@ -5610,3 +5610,29 @@ Processing by CreaturesController#index as HTML
   [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
   Rendered creatures/index.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/1" for ::1 at 2016-01-09 20:29:50 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered creatures/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/creatures/1" for ::1 at 2016-01-09 20:29:53 -0800
+Processing by CreaturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YvevqRdoujGqt/o2uS2Vc2TdlYggvpgE/hHXsfiL1xyGP6xE8H+J9wYarP7KH7Jxn1MOSlrCjhHDtIj9zKn6+w==", "id"=>"1"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "creatures" WHERE "creatures"."id" = ?  [["id", 1]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/creatures
+Completed 302 Found in 4ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/creatures" for ::1 at 2016-01-09 20:29:53 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.1ms)

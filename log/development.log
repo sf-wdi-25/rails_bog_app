@@ -14,3 +14,13 @@ Migrating to CreateCreatures (20160109235718)
   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160109235718"]]
   [1m[35m (1.4ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Yoda"], ["description", "Little green man"], ["created_at", "2016-01-10 00:05:28.174711"], ["updated_at", "2016-01-10 00:05:28.174711"]]
+  [1m[36m (42.1ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luke"], ["description", "Jedi"], ["created_at", "2016-01-10 00:06:18.358777"], ["updated_at", "2016-01-10 00:06:18.358777"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Darth Vader"], ["description", "Father of Luke"], ["created_at", "2016-01-10 00:06:18.366504"], ["updated_at", "2016-01-10 00:06:18.366504"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m

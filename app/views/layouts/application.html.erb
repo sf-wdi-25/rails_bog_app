@@ -10,7 +10,9 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="center-block butbox">
 		<button type="button" class=" pull-left btn btn-default navbar-btn"><%= link_to_unless_current("Home", root_path) { "Home" } %></button>
-	<%= link_to "Add New Creature", new_creature_path, class: "btn btn pull-right" %>
+		<button type="button" class=" pull-right btn btn-default navbar-btn">
+			<%= link_to "Add New Creature", new_creature_path %>
+		</button>
 		</div>
 </nav>
 <div class="jumbotron">
@@ -19,10 +21,11 @@
 
 <%= yield %>
 
-<div class="footer">
-
-		
-</div>
+<footer class="footer">
+	<div class="container">
+		<p>create creatures</p>
+	</div>
+</footer>
 
 </body>
 </html>

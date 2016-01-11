@@ -14,9 +14,11 @@ $black: #000;
 
 
 //fonts
-
+$oswald: 'Raleway', sans-serif;
 $raleway: 'Raleway', sans-serif;
-
+ *{
+ 	font-family: $oswald
+ }
 
 p{
 	color: $red;
@@ -28,6 +30,8 @@ p{
 	border: 4px solid $white;
 	background-color: $black;
 	width:100%;
+	background: url("http://38.media.tumblr.com/avatar_ceb0695137c8_128.png");
+	
 }
 
 
@@ -35,13 +39,14 @@ p{
 .btn{
 	color: $green;
 	font-size:17px;
-	background-color: $white;
+	background-color: $black;
 	border-radius: 0;
 	margin-top: 10px;
 }
 
 body{
 	padding-top: 70px;
+	padding-bottom: 70px;
 	margin: 0;
 	 height:100%;
  width:100%;
@@ -87,6 +92,10 @@ body{
 	background-color: $green;
 }
 
+h2{
+	color: $white;
+}
+
 hr{
 	color: $red;
 }
@@ -104,9 +113,11 @@ p.descriptor {
 
 .namepart{
 	background-color: $white;
-	margin-bottom: 30px
+	margin-bottom: 40px;
+	color: $red;
 
 }
+
 
 .butbox{
 	background-color: $green;
@@ -132,6 +143,16 @@ p.descriptor {
 	width: 25%;
 	padding: 10px;
 	margin-bottom: 35px;
+}
+
+.footer{
+	position: fixed; 
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 60px;
+	background-color: $black;
 }
 
 .card{
@@ -179,7 +200,7 @@ p.descriptor {
 	height: 200px;
 	font-family: 'Oswald', sans-serif;
 	color: $white;
-		background: rgba(255,255,255,1);
+	background: rgba(255,255,255,1);
 	background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(64,230,39,1) 100%);
 	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(64,230,39,1)));
 	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(64,230,39,1) 100%);

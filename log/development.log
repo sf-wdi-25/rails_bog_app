@@ -988,3 +988,64 @@ Processing by CreaturesController#index as HTML
   [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
   Rendered creatures/index.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2016-01-10 18:30:16 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/creatures/edit" for 127.0.0.1 at 2016-01-10 18:30:17 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mCreature Load (0.3ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 0]]
+  Rendered creatures/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h3><%= @creature.name %></h3>
+    2: <p><%= @creature.description %></p>
+  app/views/creatures/show.html.erb:1:in `_app_views_creatures_show_html_erb__4443942725346993058_70223185708700'
+  app/controllers/creatures_controller.rb:33:in `show'
+
+
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.8ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.4ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/is/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started GET "/creatures/1/edit" for 127.0.0.1 at 2016-01-10 18:30:56 -0800
+Processing by CreaturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered creatures/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/creatures/1" for 127.0.0.1 at 2016-01-10 18:31:03 -0800
+Processing by CreaturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KWtj3I1xbH9tVijGCiQ/S3Y5oRB5KI4SwQF24I9uxOqUFLW/AiM+D9WNa/uQrYSgnnMu4EQ8EQ7zEbkdX6hBpQ==", "creature"=>{"name"=>"Yodo", "description"=>"Little green poo"}, "commit"=>"Save Creature", "id"=>"1"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "creatures" SET "description" = ?, "updated_at" = ? WHERE "creatures"."id" = ?[0m  [["description", "Little green poo"], ["updated_at", "2016-01-11 02:31:03.199477"], ["id", 1]]
+  [1m[35m (199.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures/1
+Completed 302 Found in 208ms (ActiveRecord: 199.9ms)
+
+
+Started GET "/creatures/1" for 127.0.0.1 at 2016-01-10 18:31:03 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered creatures/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms)

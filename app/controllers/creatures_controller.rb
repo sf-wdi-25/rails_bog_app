@@ -17,15 +17,17 @@ class CreaturesController < ApplicationController
 	end
 
 	def create
-		#white lists params and saves them to a varaible
+		# whitelist params and save them to a variable
 		creature_params = params.require(:creature).permit(:name, :description)
 
-		#creating a new creature from the parameter of creature
+		# create a new creature from `creature_params`
 		creature = Creature.new(creature_params)
 
-		#if it saves then it refreshes the page and displays all the creatures
+		# if creature saves, redirect to route that displays
+		# ONLY the newly created creature
 		if creature.save
-			redirect_to creatures_path(creature)
+		  redirect_to creature_path(creature)
+		  # redirect_to "/creatures/#{creature.id}"
 		end
 	end
 
@@ -44,6 +46,24 @@ class CreaturesController < ApplicationController
 		@creature = Creature.find_by_id(creature_id)
 
 		render :edit
+	end
+
+	def update
+
+		#getting the id of the creature
+		creature_id = params[:id]
+
+		# creature equals the id requested
+		creature = Creature.find_by_id(creature_id)
+
+		#white listing the params and saving them into a variable
+		creature_params = params.require(:creature).permit(:name, :description)
+
+		#updaing the creature attributes within the params
+		creature.update_attributes(creature_params)
+
+		#redirecting the show the page of the updated creature
+		redirect_to creature_path(creature)
 	end
 
 end

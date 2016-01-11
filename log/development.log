@@ -1568,3 +1568,105 @@ Processing by CreaturesController#show as HTML
   [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 6]]
   Rendered creatures/show.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/6" for 127.0.0.1 at 2016-01-10 18:39:12 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered creatures/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 24.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-3.3.6.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for 127.0.0.1 at 2016-01-10 18:39:13 -0800
+
+
+Started GET "/assets/creatures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-10 18:39:13 -0800
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2016-01-10 18:39:13 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-10 18:39:13 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-10 18:39:13 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-10 18:39:13 -0800
+
+
+Started GET "/assets/creatures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-10 18:39:13 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-10 18:39:13 -0800
+
+
+Started DELETE "/creatures/6" for 127.0.0.1 at 2016-01-10 18:39:14 -0800
+Processing by CreaturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vpVPPBVVRtQ/MzTSQAXiEGOXyqpn9POiNZzLN6tnMLgD6plfmgcUpIfod+/ajFn7i91FWlrgbL4HjATKe6G19w==", "id"=>"6"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "creatures" WHERE "creatures"."id" = ?[0m  [["id", 6]]
+  [1m[35m (116.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures
+Completed 302 Found in 120ms (ActiveRecord: 117.1ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2016-01-10 18:39:14 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures/8" for 127.0.0.1 at 2016-01-10 18:39:20 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mCreature Load (0.2ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered creatures/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/creatures/8" for 127.0.0.1 at 2016-01-10 18:39:22 -0800
+Processing by CreaturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CMl/1JykBB2jEk5NPS2f9dhL6UdG4U+MMPgL0DsYkz21tqm3E/ZWbRvJDXCnpCQeMAFmt3v10JAC6MQt694Wcg==", "id"=>"8"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "creatures" WHERE "creatures"."id" = ?[0m  [["id", 8]]
+  [1m[35m (133.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures
+Completed 302 Found in 135ms (ActiveRecord: 133.4ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2016-01-10 18:39:22 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures/10" for 127.0.0.1 at 2016-01-10 18:39:28 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mCreature Load (0.2ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered creatures/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/creatures/10" for 127.0.0.1 at 2016-01-10 18:39:30 -0800
+Processing by CreaturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tm4vLSdSak84/CmDMTQRJurX3z4nOkBMolUlsps8/H4LEflOqAA4P4Anar6rvarNAp1Qzhou31CQRepPS/p5MQ==", "id"=>"10"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "creatures" WHERE "creatures"."id" = ?[0m  [["id", 10]]
+  [1m[35m (391.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures
+Completed 302 Found in 393ms (ActiveRecord: 391.7ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2016-01-10 18:39:30 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.2ms)

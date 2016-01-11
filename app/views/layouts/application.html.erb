@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bog App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="center-block butbox">
+		<button type="button" class=" pull-left btn btn-default navbar-btn"><%= link_to_unless_current("Home", root_path) { "Home" } %></button>
+		<button type="button" class=" pull-right btn btn-default navbar-btn">
+			<%= link_to "Add New Creature", new_creature_path %>
+		</button>
+		</div>
+</nav>
+<div class="jumbotron">
+	<h1 class="text-center">Spooky Creatures</h1>
+</div>
+
+<%= yield %>
+
+<footer class="footer">
+	<div class="container">
+		<p>create creatures</p>
+	</div>
+</footer>
+
+</body>
+</html>

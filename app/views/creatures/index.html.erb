@@ -1,0 +1,12 @@
+<% @creatures.each do |creature| %>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6 text-center card">
+				<%= link_to(creature) do %>
+				<h2> <%= creature.name %> </h2>
+				<% end %>
+				<p class="namepart"><strong class="params">Description</strong><br> <%= creature.description %> </p>
+		</div>
+	<div>
+</div>
+<% end %>

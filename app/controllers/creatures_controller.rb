@@ -25,7 +25,7 @@ class CreaturesController < ApplicationController
 
 		#if it saves then it refreshes the page and displays all the creatures
 		if creature.save
-			redirect_to creatures_path
+			redirect_to creatures_path(creature)
 		end
 	end
 

@@ -545,3 +545,214 @@ Processing by CreaturesController#index as HTML
   [1m[36mCreature Load (0.1ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
   Rendered creatures/index.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.3ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-3.3.6.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+
+
+Started GET "/assets/creatures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+
+
+Started GET "/assets/creatures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-10 18:13:13 -0800
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2016-01-10 18:13:16 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/creatures" for 127.0.0.1 at 2016-01-10 18:13:34 -0800
+Processing by CreaturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yy1UDjCZqdVIBSc3il3JwhqosDIags8XkiXHi+PI9g/eUoJtv8v7pfDeZAoQ1HIp8uI/wieWUAugNQh2Mw5zQA==", "creature"=>{"name"=>"Jar Jar Binks", "description"=>"star wars shit head"}, "commit"=>"Save Creature"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Jar Jar Binks"], ["description", "star wars shit head"], ["created_at", "2016-01-11 02:13:34.068493"], ["updated_at", "2016-01-11 02:13:34.068493"]]
+  [1m[36m (177.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/creatures.7
+Completed 302 Found in 182ms (ActiveRecord: 178.2ms)
+
+
+Started GET "/creatures.7" for 127.0.0.1 at 2016-01-10 18:13:34 -0800
+Processing by CreaturesController#index as 
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures.7" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+Processing by CreaturesController#index as 
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-3.3.6.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+
+
+Started GET "/assets/creatures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+
+
+Started GET "/assets/creatures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:02 -0800
+
+
+Started POST "/creatures" for 127.0.0.1 at 2016-01-10 18:14:07 -0800
+Processing by CreaturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yy1UDjCZqdVIBSc3il3JwhqosDIags8XkiXHi+PI9g/eUoJtv8v7pfDeZAoQ1HIp8uI/wieWUAugNQh2Mw5zQA==", "creature"=>{"name"=>"Jar Jar Binks", "description"=>"star wars shit head"}, "commit"=>"Save Creature"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jar Jar Binks"], ["description", "star wars shit head"], ["created_at", "2016-01-11 02:14:07.991588"], ["updated_at", "2016-01-11 02:14:07.991588"]]
+  [1m[35m (173.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures.8
+Completed 302 Found in 176ms (ActiveRecord: 173.8ms)
+
+
+Started GET "/creatures.8" for 127.0.0.1 at 2016-01-10 18:14:08 -0800
+Processing by CreaturesController#index as 
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures.8" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+Processing by CreaturesController#index as 
+  [1m[35mCreature Load (0.3ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/creatures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+
+
+Started GET "/assets/bootstrap-3.3.6.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+
+
+Started GET "/assets/creatures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-10 18:14:18 -0800
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2016-01-10 18:14:23 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/creatures" for 127.0.0.1 at 2016-01-10 18:14:33 -0800
+Processing by CreaturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/HkG5qb6yWERAnpbm9dvN4rdFTNhZKwrVioFNz7Jic9BBtCFKaibEanZOWYBXtTcYpeaw1xwMzdkOsrK7g8MgA==", "creature"=>{"name"=>"Pauly", "description"=>"no"}, "commit"=>"Save Creature"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Pauly"], ["description", "no"], ["created_at", "2016-01-11 02:14:33.897597"], ["updated_at", "2016-01-11 02:14:33.897597"]]
+  [1m[36m (186.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/creatures.9
+Completed 302 Found in 191ms (ActiveRecord: 187.1ms)
+
+
+Started GET "/creatures.9" for 127.0.0.1 at 2016-01-10 18:14:34 -0800
+Processing by CreaturesController#index as 
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures.9" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+Processing by CreaturesController#index as 
+  [1m[36mCreature Load (0.3ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/creatures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+
+
+Started GET "/assets/bootstrap-3.3.6.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+
+
+Started GET "/assets/creatures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-10 18:16:12 -0800
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2016-01-10 18:16:15 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/creatures" for 127.0.0.1 at 2016-01-10 18:16:24 -0800
+Processing by CreaturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7ZhR0Qhj6p/c1uXC0e9wPRbOFDKSIYLSFpqbAh1pWSGybcky3Pd2seoGKqRzgYrHBG3oPdcGRd6SqWR2LMgKw==", "creature"=>{"name"=>"Somebody", "description"=>"Like You"}, "commit"=>"Save Creature"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Somebody"], ["description", "Like You"], ["created_at", "2016-01-11 02:16:24.259267"], ["updated_at", "2016-01-11 02:16:24.259267"]]
+  [1m[35m (215.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures/10
+Completed 302 Found in 221ms (ActiveRecord: 216.0ms)
+
+
+Started GET "/creatures/10" for 127.0.0.1 at 2016-01-10 18:16:24 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered creatures/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.2ms)

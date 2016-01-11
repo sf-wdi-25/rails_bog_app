@@ -1,8 +1,12 @@
 <% @creatures.each do |creature| %>
-
-	<p>
-		<strong>Name:</strong> <%= creature.name %><br>
-		<strong>Description:</strong> <%= creature.description %>
-	</p>
-
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6 text-center card">
+				<%= link_to(creature) do %>
+				<p class="namepart"><strong class="params">Name:</strong> <%= creature.name %></p>
+				<% end %>
+				<p class="namepart"><strong class="params">Description</strong><br> <%= creature.description %> </p>
+		</div>
+	<div>
+</div>
 <% end %>

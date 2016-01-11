@@ -1,7 +1,7 @@
 #the path we are in is app/controllers/creatures_controller.rb
 
 class CreaturesController < ApplicationController
-
+	
 	def index
 		#gets all creatures from the database and saves it in a variable
 		@creatures = Creature.all
@@ -62,7 +62,7 @@ class CreaturesController < ApplicationController
 		#updaing the creature attributes within the params
 		creature.update_attributes(creature_params)
 
-		#redirecting the show the page of the updated creature
+		#redirecting the show the page of to the updated creature
 		redirect_to creature_path(creature)
 	end
 

@@ -1,7 +1,15 @@
-<!-- app/views/creatures/edit.html.erb -->
-<h2>Edit Creature</h2>
+<h1 class="text-center h1box center-block formhalf">Edit Creature</h1>
+
 <%= form_for @creature do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_area :description %>
-  <%= f.submit "Save Creature" %>
+	<div class="formhalf center-block">
+		<div class="form-group">
+			<%= f.text_field :name, class: "form-control", placeholder: "Name", autofocus: true %>
+		</div>
+		<div class="form-group">
+		<%= f.text_field :description, class: "form-control", placeholder: "Description", autofocus: true %>
+		</div>
+		<div class="form-group">
+			 <%= f.submit "Save Creature", class: "btn btn-block btn-info" %>
+		</div>
+	</div>
 <% end %>

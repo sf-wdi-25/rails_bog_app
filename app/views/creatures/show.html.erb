@@ -1,5 +1,13 @@
-form to show new creature
-
-<h3><%= @creature.name %></h3>
-<p><%=  @creature.description %></p>
-<%= button_to "Delete", @creature, method: :delete %>
+<div class="container text-center">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-3 creaturepage">
+			<h1 class="colorblack"><%= @creature.name %></h1>
+			<p class="mondes"> This monster looks like <%= @creature.description %></p>
+			<div class="creaturebutbox" >
+			<%= button_to "Delete", @creature, method: :delete, class: "dlcolor pull-left" %>
+			<%= button_to "Edit", edit_creature_path(@creature), method: :get, class: "editcolor
+			pull-right" %>
+		</div>
+		</div>
+	</div>
+</div>

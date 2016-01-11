@@ -26,5 +26,11 @@ class CreaturesController < ApplicationController
 
   end
 
+  #display a specific creature
+  def show
+    creature_id = params[:id]
+    @creature = Creature.find_by_id(creature_id)
+    render :show
+  end
 
 end

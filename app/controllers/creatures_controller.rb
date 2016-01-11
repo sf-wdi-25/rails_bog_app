@@ -66,4 +66,21 @@ class CreaturesController < ApplicationController
 		redirect_to creature_path(creature)
 	end
 
+	def destroy
+		creature_id = params[:id]
+
+		#getting creature by id from the url params
+		creature = Creature.find_by_id(creature_id)
+
+		#using the creature id to find the creature within the database
+		creature = Creature.find_by_id(creature_id)
+
+		#destroying the creature by id
+		creature.destroy
+
+		#redirecting to the creatures index page
+		redirect_to creatures_path
+
+	end
+
 end

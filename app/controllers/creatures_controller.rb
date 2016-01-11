@@ -2,4 +2,12 @@
 
 class CreaturesController < ApplicationController
 
+	def index
+		#gets all creatures from the database and saves it in a variable
+		@creatures = Creature.all
+		
+		#this renders the index view
+		render :index
+	end
+
 end

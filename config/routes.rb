@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   patch "/creatures/:id", to: "creatures#update"
 
+  delete "/creatures/:id", to: "creatures#destroy"
+
 end

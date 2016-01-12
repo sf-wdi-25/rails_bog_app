@@ -16,7 +16,7 @@ class CreaturesController < ApplicationController
     creature = Creature.new(creature_params)
 
     if creature.save
-      redirect_to creatures_path
+      redirect_to creature_path(creature)
     end
   end
 

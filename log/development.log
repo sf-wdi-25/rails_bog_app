@@ -472,3 +472,61 @@ Processing by CreaturesController#index as HTML
   [1m[36mCreature Load (0.3ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
   Rendered creatures/index.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.3ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/creatures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+
+
+Started GET "/assets/bootstrap-3.3.6.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+
+
+Started GET "/assets/creatures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-11 18:44:13 -0800
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2016-01-11 18:44:16 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/creatures" for 127.0.0.1 at 2016-01-11 18:44:55 -0800
+Processing by CreaturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2xjIR16mYNi84F8kb367YH+g6TaLCgocWkyxqk0CB9QiDS4Lonz/VJVC2k8nNMcsi1L1nyqAWCnzeDMAG2qcfQ==", "creature"=>{"name"=>"Chupacabra", "description"=>"Mmm... goats are yummy"}, "commit"=>"Save Creature"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "creatures" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Chupacabra"], ["description", "Mmm... goats are yummy"], ["created_at", "2016-01-12 02:44:55.901774"], ["updated_at", "2016-01-12 02:44:55.901774"]]
+  [1m[36m (126.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/creatures/7
+Completed 302 Found in 128ms (ActiveRecord: 126.2ms)
+
+
+Started GET "/creatures/7" for 127.0.0.1 at 2016-01-11 18:44:56 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mCreature Load (0.3ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered creatures/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+  [1m[35mCreature Load (0.3ms)[0m  SELECT "creatures".* FROM "creatures"
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "creatures"[0m
+  [1m[35mCreature Load (0.8ms)[0m  SELECT  "creatures".* FROM "creatures"  ORDER BY "creatures"."id" DESC LIMIT 1

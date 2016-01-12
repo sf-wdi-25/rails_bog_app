@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   post "/creatures", to: "creatures#create"
 
+  get "/creatures/:id", to: "creatures#show", as: "creature"
+
 end
